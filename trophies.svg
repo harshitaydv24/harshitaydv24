@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="910" height="200" viewBox="0 0 910 200"
+  role="img" aria-label="Harshita Yadav GitHub Trophies">
+  <title>GitHub Trophies — Harshita Yadav</title>
+  <defs>
+    <linearGradient id="trophyTitleGrad" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#ff4da6"/>
+      <stop offset="100%" stop-color="#c44dff"/>
+    </linearGradient>
+    <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="trophyClip">
+      <rect width="910" height="200" rx="12"/>
+    </clipPath>
+    <filter id="trophyShadow" x="-3%" y="-3%" width="106%" height="112%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#c44dff" flood-opacity="0.3"/>
+    </filter>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=Share+Tech+Mono&amp;display=swap');</style>
+  </defs>
+
+  <rect width="910" height="200" rx="12" ry="12" fill="#140022" filter="url(#trophyShadow)"/>
+  <rect x="1" y="1" width="908" height="198" rx="11" ry="11" fill="none"
+        stroke="url(#trophyTitleGrad)" stroke-width="1.2" opacity="0.4"/>
+
+  <!-- title -->
+  <text x="455" y="22" text-anchor="middle"
+        font-family="'Space Grotesk','Segoe UI',Arial,sans-serif"
+        font-weight="700" font-size="13" fill="#f0d8ff" letter-spacing="2">
+    🏆 GitHub Trophies
+  </text>
+
+  
+  <!-- trophy 0: Total Stars -->
+  <g transform="translate(10,30)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.15s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="10,60;10,30" dur="0.4s" begin="0.15s" fill="freeze" additive="replace"/>
+
+    <!-- cell bg -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="rgba(30,0,50,0.8)" stroke="#ffd700" stroke-width="1.5" opacity="0.9"/>
+
+    <!-- rank badge top -->
+    <rect x="52" y="8" width="36" height="18" rx="9"
+          fill="#ffd700" opacity="0.25"/>
+    <text x="70" y="21" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="10"
+          fill="#ffd700">SSS</text>
+
+    <!-- icon -->
+    <text x="70" y="72" text-anchor="middle" font-size="28">🏆</text>
+
+    <!-- label -->
+    <text x="70" y="96" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#c9a8e8">Total Stars</text>
+
+    <!-- value -->
+    <text x="70" y="114" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="18" fill="#ffd700">42</text>
+
+    <!-- glowing border on hover approximation (pulse) -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="none" stroke="#ffd700" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="3s" begin="0.65s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- trophy 1: Commits -->
+  <g transform="translate(160,30)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.33s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="160,60;160,30" dur="0.4s" begin="0.33s" fill="freeze" additive="replace"/>
+
+    <!-- cell bg -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="rgba(30,0,50,0.8)" stroke="#ff9900" stroke-width="1.5" opacity="0.9"/>
+
+    <!-- rank badge top -->
+    <rect x="52" y="8" width="36" height="18" rx="9"
+          fill="#ff9900" opacity="0.25"/>
+    <text x="70" y="21" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="10"
+          fill="#ff9900">SS</text>
+
+    <!-- icon -->
+    <text x="70" y="72" text-anchor="middle" font-size="28">🥇</text>
+
+    <!-- label -->
+    <text x="70" y="96" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#c9a8e8">Commits</text>
+
+    <!-- value -->
+    <text x="70" y="114" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="18" fill="#ff9900">318</text>
+
+    <!-- glowing border on hover approximation (pulse) -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="none" stroke="#ff9900" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="3s" begin="0.83s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- trophy 2: Pull Requests -->
+  <g transform="translate(310,30)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.51s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="310,60;310,30" dur="0.4s" begin="0.51s" fill="freeze" additive="replace"/>
+
+    <!-- cell bg -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="rgba(30,0,50,0.8)" stroke="#c44dff" stroke-width="1.5" opacity="0.9"/>
+
+    <!-- rank badge top -->
+    <rect x="52" y="8" width="36" height="18" rx="9"
+          fill="#c44dff" opacity="0.25"/>
+    <text x="70" y="21" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="10"
+          fill="#c44dff">S</text>
+
+    <!-- icon -->
+    <text x="70" y="72" text-anchor="middle" font-size="28">⭐</text>
+
+    <!-- label -->
+    <text x="70" y="96" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#c9a8e8">Pull Requests</text>
+
+    <!-- value -->
+    <text x="70" y="114" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="18" fill="#c44dff">24</text>
+
+    <!-- glowing border on hover approximation (pulse) -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="none" stroke="#c44dff" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="3s" begin="1.01s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- trophy 3: Issues Solved -->
+  <g transform="translate(460,30)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.69s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="460,60;460,30" dur="0.4s" begin="0.69s" fill="freeze" additive="replace"/>
+
+    <!-- cell bg -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="rgba(30,0,50,0.8)" stroke="#ff4da6" stroke-width="1.5" opacity="0.9"/>
+
+    <!-- rank badge top -->
+    <rect x="52" y="8" width="36" height="18" rx="9"
+          fill="#ff4da6" opacity="0.25"/>
+    <text x="70" y="21" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="10"
+          fill="#ff4da6">A+</text>
+
+    <!-- icon -->
+    <text x="70" y="72" text-anchor="middle" font-size="28">🎯</text>
+
+    <!-- label -->
+    <text x="70" y="96" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#c9a8e8">Issues Solved</text>
+
+    <!-- value -->
+    <text x="70" y="114" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="18" fill="#ff4da6">11</text>
+
+    <!-- glowing border on hover approximation (pulse) -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="none" stroke="#ff4da6" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="3s" begin="1.19s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- trophy 4: Contributed To -->
+  <g transform="translate(610,30)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.87s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="610,60;610,30" dur="0.4s" begin="0.87s" fill="freeze" additive="replace"/>
+
+    <!-- cell bg -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="rgba(30,0,50,0.8)" stroke="#00ccff" stroke-width="1.5" opacity="0.9"/>
+
+    <!-- rank badge top -->
+    <rect x="52" y="8" width="36" height="18" rx="9"
+          fill="#00ccff" opacity="0.25"/>
+    <text x="70" y="21" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="10"
+          fill="#00ccff">A</text>
+
+    <!-- icon -->
+    <text x="70" y="72" text-anchor="middle" font-size="28">🤝</text>
+
+    <!-- label -->
+    <text x="70" y="96" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#c9a8e8">Contributed To</text>
+
+    <!-- value -->
+    <text x="70" y="114" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="18" fill="#00ccff">6</text>
+
+    <!-- glowing border on hover approximation (pulse) -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="none" stroke="#00ccff" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="3s" begin="1.37s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- trophy 5: Repositories -->
+  <g transform="translate(760,30)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.05s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="760,60;760,30" dur="0.4s" begin="1.05s" fill="freeze" additive="replace"/>
+
+    <!-- cell bg -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="rgba(30,0,50,0.8)" stroke="#80ffcc" stroke-width="1.5" opacity="0.9"/>
+
+    <!-- rank badge top -->
+    <rect x="52" y="8" width="36" height="18" rx="9"
+          fill="#80ffcc" opacity="0.25"/>
+    <text x="70" y="21" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="10"
+          fill="#80ffcc">B</text>
+
+    <!-- icon -->
+    <text x="70" y="72" text-anchor="middle" font-size="28">📦</text>
+
+    <!-- label -->
+    <text x="70" y="96" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" fill="#c9a8e8">Repositories</text>
+
+    <!-- value -->
+    <text x="70" y="114" text-anchor="middle"
+          font-family="'Courier New',monospace" font-weight="bold" font-size="18" fill="#80ffcc">12</text>
+
+    <!-- glowing border on hover approximation (pulse) -->
+    <rect width="140" height="140" rx="14" ry="14"
+          fill="none" stroke="#80ffcc" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="3s" begin="1.55s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- shine sweep across all trophies -->
+  <g clip-path="url(#trophyClip)">
+    <rect x="-200" y="0" width="180" height="200" fill="url(#shineGrad)">
+      <animate attributeName="x" values="-200;1110" dur="4s" begin="2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

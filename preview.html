@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harshita Yadav — GitHub Profile Preview</title>
+  <style>
+    :root {
+      --bg: #0d0011;
+      --card: #140022;
+      --p1: #ff4da6;
+      --p2: #c44dff;
+      --text: #f0d8ff;
+      --text2: #c9a8e8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── toolbar ───────────────────────────────────── */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 24px;
+      background: rgba(13,0,17,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,77,166,0.2);
+    }
+    .toolbar h1 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--p1);
+      flex: 1;
+      letter-spacing: 1px;
+    }
+    .toolbar span {
+      font-size: 11px;
+      color: var(--text2);
+      background: rgba(255,77,166,0.1);
+      border: 1px solid rgba(255,77,166,0.3);
+      border-radius: 20px;
+      padding: 3px 10px;
+    }
+    .mode-btn {
+      cursor: pointer;
+      background: rgba(196,77,255,0.15);
+      border: 1px solid rgba(196,77,255,0.4);
+      color: var(--text);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      transition: all 0.2s;
+    }
+    .mode-btn:hover { background: rgba(196,77,255,0.3); }
+
+    /* ── main page ─────────────────────────────────── */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 16px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    /* ── section labels ───────────────────────────── */
+    .section-label {
+      width: 100%;
+      font-size: 11px;
+      color: var(--p2);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      padding: 0 2px;
+      margin-bottom: -16px;
+    }
+
+    /* ── banner ───────────────────────────────────── */
+    .banner-wrap {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(255,77,166,0.15), 0 0 120px rgba(196,77,255,0.08);
+    }
+    .banner-wrap img, .banner-wrap object {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* ── lanyard ──────────────────────────────────── */
+    .lanyard-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .lanyard-wrap img {
+      width: 280px;
+      filter: drop-shadow(0 10px 30px rgba(255,77,166,0.3));
+    }
+
+    /* ── typing ───────────────────────────────────── */
+    .typing-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: var(--card);
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid rgba(255,77,166,0.15);
+    }
+    .typing-wrap img { max-width: 100%; border-radius: 6px; }
+
+    /* ── row (stats + langs) ──────────────────────── */
+    .cards-row {
+      width: 100%;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .cards-row img {
+      flex: 1;
+      min-width: 0;
+      width: 50%;
+      border-radius: 14px;
+      box-shadow: 0 4px 30px rgba(196,77,255,0.15);
+    }
+
+    /* ── trophies ─────────────────────────────────── */
+    .trophies-wrap {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 30px rgba(255,77,166,0.12);
+    }
+    .trophies-wrap img { width: 100%; display: block; }
+
+    /* ── divider ──────────────────────────────────── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--p1), var(--p2), transparent);
+      opacity: 0.25;
+    }
+
+    /* ── about card ───────────────────────────────── */
+    .about-card {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid rgba(255,77,166,0.15);
+      border-radius: 14px;
+      padding: 20px 24px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 2;
+      color: var(--text2);
+    }
+    .about-card .kv { display: flex; gap: 12px; }
+    .about-card .key { color: var(--p1); min-width: 80px; }
+    .about-card .val { color: var(--text); }
+
+    /* ── skills badges ────────────────────────────── */
+    .badges-section {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid rgba(196,77,255,0.15);
+      border-radius: 14px;
+      padding: 20px 24px;
+    }
+    .badges-section h3 {
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--p2);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .badge-group { margin-bottom: 12px; }
+    .badge-group h4 { font-size: 11px; color: var(--text2); margin-bottom: 8px; }
+    .badge-group .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(255,77,166,0.3);
+    }
+
+    /* ── projects table ───────────────────────────── */
+    .projects-wrap {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid rgba(255,77,166,0.12);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .projects-wrap h3 {
+      padding: 16px 20px 10px;
+      font-size: 14px;
+      color: var(--p1);
+      border-bottom: 1px solid rgba(255,77,166,0.15);
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th {
+      padding: 10px 16px;
+      text-align: left;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: var(--p2);
+      background: rgba(196,77,255,0.06);
+      border-bottom: 1px solid rgba(196,77,255,0.15);
+    }
+    td {
+      padding: 12px 16px;
+      color: var(--text2);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    td:first-child { color: var(--text); font-weight: 600; }
+    tr:hover td { background: rgba(255,77,166,0.04); }
+
+    /* ── connect badges ───────────────────────────── */
+    .connect-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      width: 100%;
+    }
+    .connect-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 24px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.15s, filter 0.15s;
+    }
+    .connect-badge:hover { transform: translateY(-3px); filter: brightness(1.2); }
+    .cb-github  { background: #181717; border: 1px solid #444; }
+    .cb-gmail   { background: #ea4335; }
+    .cb-behance { background: #1769ff; }
+    .cb-li      { background: #0a66c2; }
+
+    /* ── snake ────────────────────────────────────── */
+    .snake-wrap {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid rgba(255,77,166,0.12);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+    }
+    .snake-wrap p {
+      font-size: 12px;
+      color: var(--text2);
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .snake-placeholder {
+      width: 100%;
+      height: 120px;
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(255,77,166,0.06) 0px, rgba(255,77,166,0.06) 1px,
+        transparent 1px, transparent 14px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        rgba(196,77,255,0.06) 0px, rgba(196,77,255,0.06) 1px,
+        transparent 1px, transparent 14px
+      );
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: rgba(255,77,166,0.4);
+      letter-spacing: 2px;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* ── footer ───────────────────────────────────── */
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+      padding: 20px;
+    }
+    .footer span { color: var(--p1); }
+
+    /* ── light mode ───────────────────────────────── */
+    body.light {
+      --bg: #fdf0f8;
+      --card: #f5e0f5;
+      --p1: #c0006a;
+      --p2: #7700cc;
+      --text: #2a0035;
+      --text2: #5a1070;
+      background: var(--bg);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Toolbar -->
+<div class="toolbar">
+  <h1>⟨ harshitaydv24 ⟩ GitHub Profile Preview</h1>
+  <span>🟢 Local Preview</span>
+  <button class="mode-btn" onclick="document.body.classList.toggle('light'); updateBanner()">☀ / 🌙 Toggle Mode</button>
+</div>
+
+<div class="page" id="page">
+
+  <!-- BANNER -->
+  <div class="section-label">HERO BANNER</div>
+  <div class="banner-wrap">
+    <img id="bannerImg" src="banner.svg?v=1" alt="Harshita Yadav Banner"/>
+  </div>
+
+  <!-- LANYARD -->
+  <div class="section-label">LANYARD BADGE</div>
+  <div class="lanyard-wrap">
+    <img src="lanyard.svg?v=1" alt="Harshita Yadav Lanyard"/>
+  </div>
+
+  <!-- TYPING -->
+  <div class="section-label">TYPING TAGLINE</div>
+  <div class="typing-wrap">
+    <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=18&pause=1200&color=FF4DA6&center=true&vCenter=true&width=600&lines=designing+intuitive+experiences...;...through+creativity+and+code+✨;Student+|+Graphic+Designer+|+Developer;Photoshop+|+Figma+|+Canva+|+Python" alt="Typing SVG"/>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <div class="section-label">ABOUT ME</div>
+  <div class="about-card">
+    <div class="kv"><span class="key">👩‍💻 Name</span><span class="val">Harshita Yadav</span></div>
+    <div class="kv"><span class="key">🎓 Role</span><span class="val">Student</span></div>
+    <div class="kv"><span class="key">🏠 GitHub</span><span class="val">@harshitaydv24</span></div>
+    <div class="kv"><span class="key">📧 Email</span><span class="val">harshitaydv1024@gmail.com</span></div>
+    <div class="kv"><span class="key">🎨 Vibe</span><span class="val">designing intuitive experiences through creativity and code</span></div>
+    <div class="kv"><span class="key">⚡ Fun</span><span class="val">I debug with coffee and design with music ☕🎵</span></div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section-label">SKILLS &amp; TOOLS</div>
+  <div class="badges-section">
+    <h3>⟨ Tech Stack ⟩</h3>
+    <div class="badge-group">
+      <h4>🖌️ Design Stack</h4>
+      <div class="badges">
+        <span class="badge" style="color:#31A8FF;border-color:rgba(49,168,255,0.4);background:rgba(49,168,255,0.1)">🅿 Adobe Photoshop</span>
+        <span class="badge" style="color:#F24E1E;border-color:rgba(242,78,30,0.4);background:rgba(242,78,30,0.1)">◈ Figma</span>
+        <span class="badge" style="color:#00C4CC;border-color:rgba(0,196,204,0.4);background:rgba(0,196,204,0.1)">🎨 Canva</span>
+      </div>
+    </div>
+    <div class="badge-group">
+      <h4>💻 Dev Stack</h4>
+      <div class="badges">
+        <span class="badge" style="color:#ffdd57;border-color:rgba(255,221,87,0.4);background:rgba(255,221,87,0.08)">🐍 Python</span>
+        <span class="badge" style="color:#f89820;border-color:rgba(248,152,32,0.4);background:rgba(248,152,32,0.08)">☕ Java</span>
+        <span class="badge" style="color:#a8e6ff;border-color:rgba(168,230,255,0.4);background:rgba(168,230,255,0.08)">⚙ C/C++</span>
+        <span class="badge" style="color:#f06529;border-color:rgba(240,101,41,0.4);background:rgba(240,101,41,0.08)">🌐 HTML5</span>
+        <span class="badge" style="color:#2965f1;border-color:rgba(41,101,241,0.4);background:rgba(41,101,241,0.08)">🎨 CSS3</span>
+        <span class="badge" style="color:#ff4da6;border-color:rgba(255,77,166,0.4);background:rgba(255,77,166,0.08)">✨ Vibe Coding</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STATS + LANGS -->
+  <div class="section-label">GITHUB ANALYTICS</div>
+  <div class="cards-row">
+    <img src="stats.svg?v=1" alt="GitHub Stats"/>
+    <img src="langs.svg?v=1" alt="Top Skills"/>
+  </div>
+
+  <!-- TROPHIES -->
+  <div class="trophies-wrap">
+    <img src="trophies.svg?v=1" alt="GitHub Trophies"/>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <div class="section-label">FEATURED PROJECTS</div>
+  <div class="projects-wrap">
+    <h3>🚀 Featured Projects</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>🎨 Project</th>
+          <th>📝 Description</th>
+          <th>🛠️ Tech Stack</th>
+          <th>⭐</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Design Portfolio</td>
+          <td>Curated showcase of UI/UX and graphic design work</td>
+          <td>Figma · Canva · HTML/CSS</td>
+          <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td>Creative Coder</td>
+          <td>Fun coded animations and micro-interactions</td>
+          <td>HTML · CSS · Python</td>
+          <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td>Vibe Projects</td>
+          <td>AI-assisted creative coding experiments</td>
+          <td>Python · Vibe Coding</td>
+          <td>⭐⭐</td>
+        </tr>
+        <tr>
+          <td>Brand Identity</td>
+          <td>Visual branding projects using Photoshop &amp; Figma</td>
+          <td>Photoshop · Figma</td>
+          <td>⭐⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SNAKE -->
+  <div class="section-label">CONTRIBUTION ACTIVITY</div>
+  <div class="snake-wrap">
+    <p>🐍 Snake generates daily via GitHub Action → output branch</p>
+    <div class="snake-placeholder">
+      ▶ github-contribution-grid-snake.svg — runs after push
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONNECT -->
+  <div class="section-label">CONNECT</div>
+  <div class="connect-wrap">
+    <a class="connect-badge cb-github" href="https://github.com/harshitaydv24">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub
+    </a>
+    <a class="connect-badge cb-gmail" href="mailto:harshitaydv1024@gmail.com">
+      📧 Gmail
+    </a>
+    <a class="connect-badge cb-behance" href="#">
+      🎨 Behance
+    </a>
+    <a class="connect-badge cb-li" href="#">
+      💼 LinkedIn
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>✨ <span>designing intuitive experiences through creativity and code</span> ✨</p>
+    <p style="margin-top:8px">Made with 💖 by Harshita Yadav · @harshitaydv24</p>
+  </div>
+
+</div>
+
+<script>
+  function updateBanner() {
+    const img = document.getElementById('bannerImg');
+    const isLight = document.body.classList.contains('light');
+    img.src = (isLight ? 'banner-light.svg' : 'banner.svg') + '?v=1&t=' + Date.now();
+  }
+</script>
+</body>
+</html>

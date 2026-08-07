@@ -1,0 +1,18 @@
+import re
+with open('banner.svg', encoding='utf-8') as f:
+    c = f.read()
+print('Hearts symbol in file:', '\u2665' in c)
+print('Sparkle symbol in file:', '\u2726' in c)
+print('animateTransform count:', c.count('animateTransform'))
+print('animate count:', c.count('<animate '))
+print('circle elements:', c.count('<circle '))
+print('Total file size:', len(c), 'chars')
+print('buildDreams in file:', 'buildDreams' in c)
+print('KEEP CODING in file:', 'KEEP CODING' in c)
+print('neon-sign in file:', 'neon-sign' in c)
+print('barGrad in file:', 'barGrad' in c)
+print('holoReveal in file:', 'holoReveal' in c)
+print('scanGrad in file:', 'scanGrad' in c)
+print('base64 image in file:', 'data:image/png;base64,' in c)
+print('No script tags:', '<script' not in c)
+print('name gradient animated:', 'stop-color' in c and 'indefinite' in c)

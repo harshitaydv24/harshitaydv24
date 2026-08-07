@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="490" height="220" viewBox="0 0 490 220"
+  role="img" aria-label="Harshita Yadav GitHub Stats">
+  <title>GitHub Stats — Harshita Yadav</title>
+  <defs>
+    <linearGradient id="rankGrad" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#ff4da6">
+        <animate attributeName="stop-color" values="#ff4da6;#c44dff;#ff4da6" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#c44dff">
+        <animate attributeName="stop-color" values="#c44dff;#ff4da6;#c44dff" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ff4da6" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#c44dff" flood-opacity="0.4"/>
+    </filter>
+    <filter id="cardShadow" x="-3%" y="-3%" width="106%" height="112%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#c44dff" flood-opacity="0.3"/>
+    </filter>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;family=Share+Tech+Mono&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- card background -->
+  <rect width="490" height="220" rx="16" ry="16" fill="#140022" filter="url(#cardShadow)"/>
+  <rect x="1" y="1" width="488" height="218" rx="15" ry="15" fill="none"
+        stroke="url(#rankGrad)" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- title -->
+  <text x="20" y="28" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif"
+        font-weight="700" font-size="14" fill="#f0d8ff" letter-spacing="1">GitHub Stats</text>
+  <text x="20" y="44" font-family="'Courier New',monospace" font-size="10" fill="#c44dff" opacity="0.7">harshitaydv24</text>
+
+  <!-- rank ring (left side) -->
+  <g transform="translate(82,120)">
+    <!-- track -->
+    <circle r="54" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="10"/>
+    <!-- progress arc -->
+    <circle r="54" fill="none" stroke="url(#rankGrad)" stroke-width="10"
+            stroke-linecap="round" filter="url(#glow)"
+            stroke-dasharray="339" stroke-dashoffset="339"
+            transform="rotate(-90)">
+      <animate attributeName="stroke-dashoffset" from="339" to="75"
+               dur="1.5s" begin="0.2s" fill="freeze"/>
+    </circle>
+    <!-- rank label -->
+    <text text-anchor="middle" y="-8"
+          font-family="'Space Grotesk','Segoe UI',Arial,sans-serif"
+          font-weight="700" font-size="28" fill="url(#rankGrad)" filter="url(#glow)">A+</text>
+    <text text-anchor="middle" y="12" font-family="'Courier New',monospace" font-size="10" fill="#c9a8e8">Rank</text>
+    <!-- percentage text -->
+    <text text-anchor="middle" y="30" font-family="'Courier New',monospace" font-size="9" fill="#ff4da6">Top 15%</text>
+  </g>
+
+  <!-- stat rows (right side) -->
+  <g transform="translate(0,0)">
+    
+  <!-- row 0 -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.40s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" values="-30,0;0,0" dur="0.4s" begin="0.40s" fill="freeze" additive="sum"/>
+    <text x="165" y="44" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c9a8e8">⭐ Stars Earned</text>
+    <rect x="165" y="48" width="200" height="8" rx="4" fill="rgba(255,255,255,0.07)"/>
+    <rect x="165" y="48" width="0" height="8" rx="4" fill="#ff4da6">
+      <animate attributeName="width" from="0" to="88" dur="0.8s" begin="0.50s" fill="freeze"/>
+    </rect>
+    <text x="372" y="56" font-family="'Courier New',monospace" font-size="10" fill="#ff4da6" font-weight="bold">42</text>
+  </g>
+  <!-- row 1 -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.65s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" values="-30,0;0,0" dur="0.4s" begin="0.65s" fill="freeze" additive="sum"/>
+    <text x="165" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c9a8e8">🔁 Total Commits</text>
+    <rect x="165" y="84" width="200" height="8" rx="4" fill="rgba(255,255,255,0.07)"/>
+    <rect x="165" y="84" width="0" height="8" rx="4" fill="#c44dff">
+      <animate attributeName="width" from="0" to="160" dur="0.8s" begin="0.75s" fill="freeze"/>
+    </rect>
+    <text x="372" y="92" font-family="'Courier New',monospace" font-size="10" fill="#c44dff" font-weight="bold">318</text>
+  </g>
+  <!-- row 2 -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.90s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" values="-30,0;0,0" dur="0.4s" begin="0.90s" fill="freeze" additive="sum"/>
+    <text x="165" y="116" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c9a8e8">🔀 Pull Requests</text>
+    <rect x="165" y="120" width="200" height="8" rx="4" fill="rgba(255,255,255,0.07)"/>
+    <rect x="165" y="120" width="0" height="8" rx="4" fill="#ff80cc">
+      <animate attributeName="width" from="0" to="48" dur="0.8s" begin="1.00s" fill="freeze"/>
+    </rect>
+    <text x="372" y="128" font-family="'Courier New',monospace" font-size="10" fill="#ff80cc" font-weight="bold">24</text>
+  </g>
+  <!-- row 3 -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.15s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" values="-30,0;0,0" dur="0.4s" begin="1.15s" fill="freeze" additive="sum"/>
+    <text x="165" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c9a8e8">🐛 Issues Opened</text>
+    <rect x="165" y="156" width="200" height="8" rx="4" fill="rgba(255,255,255,0.07)"/>
+    <rect x="165" y="156" width="0" height="8" rx="4" fill="#a0a0ff">
+      <animate attributeName="width" from="0" to="22" dur="0.8s" begin="1.25s" fill="freeze"/>
+    </rect>
+    <text x="372" y="164" font-family="'Courier New',monospace" font-size="10" fill="#a0a0ff" font-weight="bold">11</text>
+  </g>
+  <!-- row 4 -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.40s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" values="-30,0;0,0" dur="0.4s" begin="1.40s" fill="freeze" additive="sum"/>
+    <text x="165" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c9a8e8">🤝 Contributed To</text>
+    <rect x="165" y="192" width="200" height="8" rx="4" fill="rgba(255,255,255,0.07)"/>
+    <rect x="165" y="192" width="0" height="8" rx="4" fill="#80ffcc">
+      <animate attributeName="width" from="0" to="12" dur="0.8s" begin="1.50s" fill="freeze"/>
+    </rect>
+    <text x="372" y="200" font-family="'Courier New',monospace" font-size="10" fill="#80ffcc" font-weight="bold">6</text>
+  </g>
+  </g>
+</svg>
